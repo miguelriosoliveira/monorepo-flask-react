@@ -1,0 +1,22 @@
+{
+  "name": "monorepo-flask-react",
+  "version": "1.0.0",
+  "description": "Monorepo using Flask for backend and React for frontends",
+  "main": "index.js",
+  "author": "Miguel Rios <miguelriosoliveira@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  },
+  "scripts": {
+    "server": "FLASK_APP=packages/server flask run",
+    "admin": "cd packages/admin && yarn start",
+    "client": "cd packages/client && yarn start"
+  }
+}
